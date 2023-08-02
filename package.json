@@ -1,0 +1,17 @@
+{
+  "name": "wmp-summer-site",
+  "version": "0.0.5",
+  "description": "Simple site to get my mind back into the coding mindset after summer break",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Refresher",
+    "HTML",
+    "Javascript",
+    "SCSS"
+  ],
+  "author": "Dakota Adams",
+  "license": "MIT"
+}
