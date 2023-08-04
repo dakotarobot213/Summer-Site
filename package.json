@@ -13,5 +13,8 @@
     "SCSS"
   ],
   "author": "Dakota Adams",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.7.0"
+  }
 }
