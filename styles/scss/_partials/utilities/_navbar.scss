@@ -1,3 +1,22 @@
-body{
-    background-color: orange;
+
+@mixin navFormat {
+    display: flex;
+    flex-direction: column;
+    &>*:first-child {
+        display: flex;
+        background-color: orange;
+    }
+    &:not(:hover){
+        &>*:first-child~* {
+            background-color: aqua;
+            display: none;
+        }
+    }
+    &:hover {
+        &>*:first-child~* {
+            background-color: aqua;
+            display: inline;
+        }
+    }
+    
 }
