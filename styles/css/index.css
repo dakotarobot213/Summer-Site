@@ -105,6 +105,87 @@ input {
   border-radius: 0;
 }
 
+* {
+  font: 0, arial, black;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 1.5rem;
+  border-bottom: 0.25rem lime solid;
+}
+
 body {
-  background-color: orange;
+  display: flex;
+  width: 100%;
+  background-color: green;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+header h1 {
+  height: 4.5rem;
+  background-color: white;
+  color: black;
+}
+header nav {
+  position: static;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: lime;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+}
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+header nav button {
+  display: none;
+}
+header nav ul {
+  column-gap: 2rem;
+}
+header nav ul li {
+  color: white;
+}
+
+main {
+  margin-left: auto;
+  margin-right: auto;
+  height: 2000px;
+}
+main div {
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  flex-direction: row;
+}
+main div button {
+  border: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+main div button:hover {
+  background-color: rgba(255, 255, 255, 0.45);
+}
+main div button img {
+  width: 1rem;
+  height: auto;
+}
+main div ul {
+  background-color: aquamarine;
+  list-style: none;
+}
+main div ul li {
+  display: none;
 }/*# sourceMappingURL=index.css.map */
