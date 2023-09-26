@@ -19,7 +19,7 @@
 		<header>
 			<h1>Dakota's Summer Site</h1>
 			<nav>
-				<div class="background"></div>
+				<div id="background"></div>
 				<ul>
 					<li><a href="./index.html">Home</a></li>
 					<li><a href="./train.html">Train</a></li>
@@ -27,53 +27,43 @@
 				</ul>
 				<button>
 					<img
-						src=""
+						src="./images/icons/menu.svg"
 						alt="navbutton"
 					/>
 				</button>
 			</nav>
 		</header>
-		<main>
-			<div>
-				<button class="prev">
+		<div class="carousel">
+			<button class="prev"></button>
+			<ul>
+				<li>
 					<img
-						src="./images/icons/leftArrow.svg"
-						alt="Previous"
+						src="./images/index/desktop.jpeg"
+						alt="Picture of my desktop"
 					/>
-				</button>
-				<ul>
-					<li>
-						<img
-							src=""
-							alt=""
-						/>
-					</li>
-					<li>
-						<img
-							src=""
-							alt=""
-						/>
-					</li>
-					<li>
-						<img
-							src=""
-							alt=""
-						/>
-					</li>
-				</ul>
-				<button class="next">
+				</li>
+				<li class="disabled">
 					<img
-						src="./images/icons/rightArrow.svg"
-						alt="Next"
+						src="./images/train/trainExterior.jpg"
+						alt="Picture of the train I rode on"
 					/>
-				</button>
-			</div>
-		</main>
+				</li>
+				<li class="disabled">
+					<img
+						src="./images/canyon/canyon.jpeg"
+						alt="Picture I've taken of the grand canyon"
+					/>
+				</li>
+			</ul>
+			<button class="next"></button>
+		</div>
+		<h1>Hello World!</h1>
 		<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-		<script
+		<script src="./script.js"></script>
+		<!-- <script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
 			integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
 			crossorigin="anonymous"
-		></script>
+		></script> -->
 	</body>
 </html>

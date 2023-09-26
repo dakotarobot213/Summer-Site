@@ -1,5 +1,0 @@
-Color palette:
-	7d6064
-	b5a399
-	eceefa
-	b2a096

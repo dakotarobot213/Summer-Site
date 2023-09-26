@@ -1,15 +1,14 @@
-// This is a shortcut to center any block element
+// Quick and simple way to define a box
+@mixin box($width, $height:$width){
+    width: $width;
+    height: $height;
+}
+    // This is a shortcut to center any block element
 @mixin center-auto{
     margin: {
         left: auto;
         right: auto;
     }
-}
-
-// Quick and simple way to define a box
-@mixin box($width, $height:$width){
-    width: $width;
-    height: $height;
 }
 
 @mixin cover-background($url){
@@ -25,12 +24,41 @@
     & ul {
         display: flex;
         flex-direction: if($vertical, row, column);
+        padding: {
+            left: 2rem;
+            top: 0.5rem;
+            bottom: 0.5rem;
+            right: 2rem;
+        };
         & li a {
-            color: white;
+            color: black;
             text-decoration: none;
         }
     }
     & button {
         display: if($button, block, none);
+    }
+}
+@mixin formatCarousel{
+    display: flex;
+    flex-direction: row;
+    li{
+        @include box(100%);
+        & > *{
+            @include box(100%);
+            object-fit: scale-down;
+        }
+    }
+    & button {
+        border: 0;
+        background-color: rgba($primary-color, 0.1);
+        &:hover {
+            background-color: rgba($primary-color, 0.45);
+        }
+    }
+    & ul {
+        @include center-auto;
+        height: 100%;
+        list-style: none;
     }
 }

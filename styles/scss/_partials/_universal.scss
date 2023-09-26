@@ -3,68 +3,39 @@
 $text-color: black;
 $primary-color:white;
 $accent-color:lime;
-* {
-    font: 0, arial, $text-color;
-}
-
-h1{
-    font-weight: 900;
-    font-size: 1.5rem;
-    border-bottom: 0.25rem $accent-color solid;
-}
 body{
-    display: flex;
-    width: 100%;
     background-color: green;
+    display: flex;
     flex-direction: column;
-    @include center-auto;
+    font-family: arial;
+    & > * {
+        @include center-auto;
+    }
 }
 header{
     display: flex;
     flex-direction: column;
     width: 100%;
-    @include center-auto;
     & h1{
-        height: 4.5rem;
+        border-bottom: 0.25rem $accent-color solid;
         background-color: $primary-color;
-        color: $text-color;
+        font-weight: 900;
+        font-size: 1.5rem;
+        height: 4.5rem;
     }
     & nav {
-        position: static;
         @include center-auto;
         @include formatNav(true, false);
         background-color: $accent-color;
         & ul{
             column-gap: 2rem;
-            & li{
-                color: $primary-color;
-            }
         }
     }
 }
-main { 
-    @include center-auto;
-    height: 2000px;
-    & div {
-        @include box(100%, 20rem);
-        display: flex;
-        flex-direction: row;
-        & button{
-            border: 0;
-            background-color: rgba($primary-color, 0.1);
-            &:hover{
-                background-color: rgba($primary-color, 0.45);
-            }
-            img {
-                @include box(1rem, auto)
-            }
-        }
-        & ul{
-            background-color: aquamarine;
-            list-style: none;
-            & li {
-                display: none;
-            }
-        }
-    }
+.carousel{
+    @include formatCarousel;
+    width: 400px;
+}
+.disabled {
+    display: none;
 }
