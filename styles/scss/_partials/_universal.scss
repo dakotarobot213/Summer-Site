@@ -1,8 +1,12 @@
 @import "./util/reset";
 @import "./util/mixins";
 $text-color: black;
-$primary-color:white;
-$accent-color:lime;
+$primary-color: white;
+$accent-color: lime;
+$mobile-cutoff: 550px;
+h1,h2,h3,h4,h5,h6{
+font-weight: 900;
+}
 body{
     background-color: green;
     display: flex;
@@ -24,11 +28,19 @@ header{
         height: 4.5rem;
     }
     & nav {
-        @include center-auto;
-        @include formatNav(true, false);
-        background-color: $accent-color;
-        & ul{
-            column-gap: 2rem;
+        @media screen and (min-width: $mobile-cutoff) {
+            @include center-auto;
+            @include formatNav(true, false);
+            background-color: $accent-color;
+        }
+        @media screen and (max-width: $mobile-cutoff) {
+            @include center-auto;
+            @include formatNav(false, true);
+            background-color: $primary-color;
+        
+            & ul {
+                column-gap: 2rem;
+            }
         }
     }
 }
