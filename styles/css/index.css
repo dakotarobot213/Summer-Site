@@ -110,7 +110,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  background-color: green;
+  height: 1000px;
+  background-color: lightgray;
   display: flex;
   flex-direction: column;
   font-family: arial;
@@ -121,18 +122,58 @@ body > * {
 }
 
 header {
+  position: fixed;
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 header h1 {
-  border-bottom: 0.25rem lime solid;
   background-color: white;
   font-weight: 900;
   font-size: 1.5rem;
   height: 4.5rem;
 }
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 800px) {
+  header h1 {
+    border-bottom: 0.25rem lime solid;
+  }
+}
+header nav button, header nav img {
+  width: 1rem;
+  height: 1rem;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: hsla(0, 0%, 0%, 0);
+}
+header nav button {
+  position: sticky;
+}
+@media screen and (max-width: 800px) {
+  header nav {
+    margin-left: auto;
+    background-color: white;
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 2rem;
+  }
+  header nav ul li a {
+    color: black;
+    text-decoration: none;
+  }
+  header nav button {
+    display: block;
+  }
+  header nav ul {
+    row-gap: 0.3rem;
+  }
+}
+@media screen and (min-width: 800px) {
   header nav {
     margin-left: auto;
     margin-right: auto;
@@ -152,28 +193,6 @@ header h1 {
   }
   header nav button {
     display: none;
-  }
-}
-@media screen and (max-width: 550px) {
-  header nav {
-    margin-left: auto;
-    margin-right: auto;
-    background-color: white;
-  }
-  header nav ul {
-    display: flex;
-    flex-direction: column;
-    padding-left: 2rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-right: 2rem;
-  }
-  header nav ul li a {
-    color: black;
-    text-decoration: none;
-  }
-  header nav button {
-    display: block;
   }
   header nav ul {
     column-gap: 2rem;
