@@ -1,71 +1,63 @@
 @import "./util/reset";
 @import "./util/mixins";
-$text-color: black;
-$primary-color: white;
-$accent-color: lime;
-$mobile-cutoff: 800px;
-h1,h2,h3,h4,h5,h6{
-font-weight: 900;
+@import "./util/variables";
+* {
+	color: $text-color;
 }
-body{
-    height: 1000px;
-    background-color: lightgray;
-    display: flex;
-    flex-direction: column;
-    font-family: arial;
-    & > * {
-        @include center-auto;
-    }
+h1 {
+	font-size: 2em;
 }
-header{
-    // position: ;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    & h1{
-        @media screen and (min-width: $mobile-cutoff) {
-            border-bottom: 0.25rem $accent-color solid;
-        }
-        background-color: $primary-color;
-        font-weight: 900;
-        font-size: 1.5rem;
-        height: 4.5rem;
-    }
-    & nav {
-        & button, img {
-            @include box(1rem);
-            padding: 0;
-            margin: 0;
-            border: none;
-            background-color: hsla(0,0,0,0)
-        }
-        & button {
-            position: sticky;
-        }
-        // Mobile Nav
-        @media screen and (max-width: $mobile-cutoff) {
-            @include formatNav(false, true);
-            margin-left: auto;
-            background-color: $primary-color;
-            & ul {
-                row-gap: 0.3rem;
-            }
-        }
-        // Desktop nav
-        @media screen and (min-width: $mobile-cutoff) {
-            @include center-auto;
-            @include formatNav(true, false);
-            background-color: $accent-color;
-            & ul {
-                column-gap: 2rem;
-            }
-        }
-    }
+h2 {
+	font-size: 1.5em;
 }
-.carousel{
-    @include formatCarousel;
-    width: 400px;
+h3 {
+	font-size: 1.17em;
+}
+h5 {
+	font-size: 0.83em;
+}
+h6 {
+	font-size: 0.75em;
+}
+body {
+	// height: 1000px;
+	background-color: rgb(22, 22, 22);
+	display: flex;
+	flex-direction: column;
+	font-family: arial;
+	& > * {
+		@include center-auto;
+	}
+}
+header {
+	@include setFlex(column);
+	width: 100%;
+	& h1 {
+		@media screen and (min-width: $mobile-cutoff) {
+			border-bottom: 0.25rem $accent-color solid;
+		}
+		background-color: $primary-color;
+		font-weight: 900;
+		font-size: 1.5rem;
+		height: 4.5rem;
+	}
+}
+
+.navbar {
+	// Mobile Nav
+	// @media screen and (max-width: $mobile-cutoff) {
+	// 	@include formatNav(false, true);
+	// }
+	// Desktop nav
+	@media screen and (min-width: $mobile-cutoff) {
+		@include formatNav(true, false);
+	}
+}
+
+.carousel {
+	@include formatCarousel;
+	width: 400px;
 }
 .disabled {
-    display: none;
+	display: none;
 }
