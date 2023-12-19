@@ -22,15 +22,10 @@
 	@include center-auto;
 	& ul {
 		@include setFlex(if($vertical, row, column));
+
 		& li {
 			background-color: $primary-color;
 			@if $vertical {
-				&:first-child {
-					// background-color: bisque;
-				}
-				&:last-child {
-					// background-color: bisque;
-				}
 				padding: {
 					left: 1rem;
 					right: 1rem;
@@ -48,6 +43,7 @@
 	}
 
 	& button {
+		@include box(100%, 0.5rem);
 		display: if($button, block, none);
 	}
 }
